@@ -155,128 +155,178 @@
                 
         <div class="payment-hotel">
             <div class="payment-hotel-container">
-                <!-- Thông tin khách sạn -->
-                <div class="payment-hotel-box">
-                    <div class="payment-hotel-hotel">
-                        <img src="/image/malaysia.png" alt="Hotel">
-                        <div class="payment-hotel-hotel-info">
-                            <h2>Centara Mirage Resort Mũi Né</h2>
-                            <p>⭐️⭐️⭐️⭐️⭐️</p>
-                            <p>Huỳnh Thúc Kháng, Hàm Tiến, Thành Phố Phan Thiết, Bình Thuận, Việt Nam</p>
+                <div class="payment-hotel-left-group">
+                    <!-- Cột trái: Thông tin khách sạn -->
+                    <div class="payment-hotel-left">
+                        <div class="payment-hotel-hotel">
+                            <img src="/image/malaysia.png" alt="Hotel">
+                            <div class="payment-hotel-hotel-info">
+                                <h2>Centara Mirage Resort Mũi Né</h2>
+                                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>Huỳnh Thúc Kháng, Hàm Tiến, Thành Phố Phan Thiết, Bình Thuận, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="payment-hotel-checkin">
+                            <div>
+                                <strong>Nhận phòng</strong>
+                                <span>15:00, T3, 14 tháng 1</span>
+                            </div>
+                            <div>
+                                <strong>Trả phòng</strong>
+                                <span>12:00, T4, 15 tháng 1</span>
+                            </div>
+                            <div>
+                                <strong>Số đêm</strong>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="payment-hotel-room">
+                            <p><strong>Số phòng:</strong> </p>
+                            <p>1 x Premier Pool Access King Room</p>
+                            <p><strong>Đủ chỗ ngủ cho:</strong> </p>
+                            <p>2 người lớn</p>
                         </div>
                     </div>
-                    <div class="payment-hotel-checkin">
-                        <div>
-                            <strong>Nhận phòng</strong>
-                            <span>15:00, T3, 14 tháng 1</span>
+
+                    <!-- Thông tin liên hệ nhỏ hơn -->
+                    <div class="payment-hotel-box payment-hotel-contact">
+                        <h3>Thông tin liên hệ</h3>
+                        <div class="payment-hotel-login">Đăng nhập để lưu lịch sử chuyến đi của bạn</div>
+                        <div class="payment-hotel-form">
+                            <input type="text" placeholder="Họ và tên">
+                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Số điện thoại" value="+84">
                         </div>
-                        <div>
-                            <strong>Trả phòng</strong>
-                            <span>12:00, T4, 15 tháng 1</span>
+                        <div class="payment-hotel-checkbox">
+                            <input type="checkbox" id="guest">
+                            <label for="guest">Tôi đặt phòng giúp cho người khác.</label>
                         </div>
-                        <div>
-                            <strong>Số đêm</strong>
-                            <span>1</span>
-                        </div>
-                    </div>
-                    <div class="payment-hotel-room">
-                        <p><strong>Số phòng:</strong> </p>
-                        <p>1 x Premier Pool Access King Room</p>
-                        <p><strong>Đủ chỗ ngủ cho:</strong> </p>
-                        <p>2 người lớn</p>
-                    </div>
-                </div>
-        
-                <!-- Chuyến bay & Giá -->
-                <div class="payment-hotel-sidebar">
-                    <!-- Chuyến bay -->
-                    <div class="payment-hotel-box">
-                        <div class="payment-hotel-flight">
-                            <strong>TP Hồ Chí Minh → Hà Nội</strong>
-                            <p>Bamboo Airways</p>
-                            <p class="payment-hotel-flight-time">6:20 - 8:30 | CN, 12/01/2025</p>
-                            <a href="#" style="color: red;">Xem lại chi tiết chuyến bay ></a>
+
+                        <!-- Thông tin khách nhận phòng -->
+                        <div class="payment-hotel-guest-info" id="guestInfo">
+                            <h3>Thông tin khách nhận phòng</h3>
+                            <input type="text" placeholder="Họ và tên khách">
                         </div>
                     </div>
-        
-                    <!-- Chi tiết giá -->
-                    <div class="payment-hotel-box">
-                        <div class="payment-hotel-price">
-                            <h3>Chi tiết giá</h3>
-                            <table class="payment-hotel-price-table">
-                                <tr>
-                                    <td>Người lớn x1</td>
-                                    <td align="right">1.069.000 đ</td>
-                                </tr>
-                                <tr>
-                                    <td>Thuế và phí sân bay</td>
-                                    <td align="right">740.000 đ</td>
-                                </tr>
-                                <tr>
-                                    <td>Phí dịch vụ</td>
-                                    <td align="right">35.000 đ</td>
-                                </tr>
-                                <tr>
-                                    <td>Bảo hiểm</td>
-                                    <td align="right">40.000 đ</td>
-                                </tr>
-                                <tr class="payment-hotel-total">
-                                    <td>Tổng giá vé</td>
-                                    <td align="right">1.884.000 đ</td>
-                                </tr>
-                            </table>
+
+                    <!-- Box Phương thức thanh toán -->
+                    <div class="payment-hotel-box payment-hotel-method">
+                        <h3>Phương thức thanh toán</h3>
+                        <p class="payment-hotel-note">
+                            Sau khi hoàn tất thanh toán, vé điện tử sẽ được gửi ngay qua <span>SMS</span> và <span>Email</span> của bạn.
+                        </p>
+                        <div class="payment-hotel-option">
+                            <input type="radio" id="vietqr" name="payment">
+                            <label for="vietqr">Chuyển khoản (VietQR miễn phí)</label>
                         </div>
+                        <button class="payment-hotel-button">Thanh toán</button>
+                        <p class="payment-hotel-terms">
+                            Bằng cách nhấn vào nút này, bạn công nhận mình đã đọc và đồng ý với
+                            <a href="#">Điều kiện</a> và <a href="#">Điều khoản</a> của chúng tôi
+                        </p>
                     </div>
-                </div>
-            </div>
-        
-            <!-- Thông tin liên hệ nhỏ hơn -->
-            <div class="payment-hotel-box payment-hotel-contact">
-                <h3>Thông tin liên hệ</h3>
-                <div class="payment-hotel-login">Đăng nhập để lưu lịch sử chuyến đi của bạn</div>
-                <div class="payment-hotel-form">
-                    <input type="text" placeholder="Họ và tên">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Số điện thoại" value="+84">
-                </div>
-                <div class="payment-hotel-checkbox">
-                    <input type="checkbox" id="guest">
-                    <label for="guest">Tôi đặt phòng giúp cho người khác.</label>
                 </div>
 
-                <!-- Thông tin khách nhận phòng -->
-                <div class="payment-hotel-guest-info" id="guestInfo">
-                    <h3>Thông tin khách nhận phòng</h3>
-                    <input type="text" placeholder="Họ và tên khách">
+                <!-- Cột phải: Chuyến bay & Giá -->
+                <div class="payment-hotel-right">
+                    <div class="payment-hotel-box">
+                    <div class="payment-hotel-flight">
+                        <strong>TP Hồ Chí Minh → Hà Nội</strong>
+                        <p>Bamboo Airways</p>
+                        <p class="payment-hotel-flight-time">6:20 - 8:30 | CN, 12/01/2025</p>
+                        <div class="payment-hotel-divider">
+                            <a href="#" id="toggle-room-detail">Xem lại chi tiết chuyến bay ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông tin phòng ẨN lúc đầu -->
+                <div id="room-detail-box" class="room-detail-box" style="display: none;">
+                    <h3>Thông tin phòng</h3>
+                    <div class="room-content">
+                        <div class="room-image-wrapper">
+                            <div class="image-content">
+                                <span class="discount-badge">Giảm giá 5%</span>
+                                <img src="./image/cmv-premium-deluxe-4.jpg" alt="Room" class="room-image">
+                            </div>
+                        </div>
+                    <h3>Premier Pool Access King Room</h3>
+                        <p>2 người</p>
+                        <ul>
+                            <li>Sức chứa tối đa của phòng 4</li>
+                            <li>5 khách tiêu chuẩn 2</li>
+                            <li>Cho phép ở thêm 2 trẻ em thỏa mãn 4 khách tối đa có thể mất thêm phí.</li>
+                        </ul>
+                        <p>Hướng Vườn</p>
+                        <p>1 Giường King hoặc 2 Giường đơn</p>
+                        <p>Không hỗ trợ hoàn huỷ</p>
+                        <p>Giá đã bao gồm bữa sáng</p>
+                        <p>Chính sách đặt phòng & phụ thu</p>
+
+                        <div class="room-include-box">
+                            <strong>Ưu đãi bao gồm</strong>
+                            <p>Ăn sáng</p>
+                            <div class="room-note-box">
+                                <strong>Thông tin bổ sung</strong>
+                                <p>Đặt phòng không đổi tên khách</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="payment-hotel-box">
+                        <div class="payment-hotel-price">
+                            <h3 class="payment-hotel-price-title">Chi tiết giá</h3>
+
+                            <div class="payment-hotel-price-row">
+                                <div class="payment-hotel-price-label">1 phòng x 1 đêm</div>
+                                <div class="payment-hotel-price-values">
+                                    <span class="payment-hotel-price-discount">-5%</span>
+                                    <span class="payment-hotel-price-original">2.929.000 đ</span>
+                                    <div class="payment-hotel-price-final">2.775.986 đ</div>
+                                </div>
+                            </div>
+
+                            <hr class="payment-hotel-price-line">
+
+                            <div class="payment-hotel-price-row">
+                                <div class="payment-hotel-price-label">Thuế và phí dịch vụ khách sạn</div>
+                                <div class="payment-hotel-price-final">372.014 đ</div>
+                            </div>
+
+                            <hr class="payment-hotel-price-line">
+
+                            <div class="payment-hotel-price-total">
+                                <div class="payment-hotel-price-total-left">
+                                    <strong>Tổng tiền thanh toán</strong>
+                                    <div class="payment-hotel-price-note">Đã bao gồm thuế, phí, VAT</div>
+                                </div>
+                                <div class="payment-hotel-price-total-right">
+                                    <div class="payment-hotel-price-amount">2.945.922 đ</div>
+                                    <div class="payment-hotel-price-note">(Giá cho 2 người lớn)</div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
+
+        
+            
 
             <script>
                 document.getElementById("guest").addEventListener("change", function() {
                     let guestInfo = document.getElementById("guestInfo");
                     guestInfo.style.display = this.checked ? "block" : "none";
                 });
+                document.getElementById('toggle-room-detail').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const box = document.getElementById('room-detail-box');
+                    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+                });
             </script>
-
-            <!-- Box Phương thức thanh toán -->
-            <div class="payment-hotel-box payment-hotel-method">
-                <h3>Phương thức thanh toán</h3>
-                <p class="payment-hotel-note">
-                    Sau khi hoàn tất thanh toán, vé điện tử sẽ được gửi ngay qua <span>SMS</span> và <span>Email</span> của bạn.
-                </p>
-                <div class="payment-hotel-option">
-                    <input type="radio" id="vietqr" name="payment">
-                    <label for="vietqr">Chuyển khoản (VietQR miễn phí)</label>
-                </div>
-                <button class="payment-hotel-button">Thanh toán</button>
-                <p class="payment-hotel-terms">
-                    Bằng cách nhấn vào nút này, bạn công nhận mình đã đọc và đồng ý với
-                    <a href="#">Điều kiện</a> và <a href="#">Điều khoản</a> của chúng tôi
-                </p>
-            </div>
-
         </div>
 
+        
 
         <main>
             <div class="content-body" style="width: 100%; background-color: #fff;">

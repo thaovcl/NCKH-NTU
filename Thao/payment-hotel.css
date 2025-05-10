@@ -4,14 +4,24 @@
 }
 
 .payment-hotel-container {
-    display: grid;
-    grid-template-columns: 1.8fr 1.2fr;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.payment-hotel-left-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-.payment-hotel-box {
+.payment-hotel-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -43,16 +53,13 @@
 
 .payment-hotel-checkin {
     display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    padding: 15px;
-    background: #f8f8f8;
+    margin-top: 16px;
+    padding-top: 16px;
     border-radius: 5px;
 }
 
 .payment-hotel-checkin div {
     flex: 1;
-    text-align: center;
 }
 
 .payment-hotel-checkin div strong {
@@ -61,7 +68,7 @@
 }
 
 .payment-hotel-room {
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
 .payment-hotel-room p {
@@ -69,34 +76,235 @@
 }
 
 /* Chia cột cho chuyến bay và giá */
-.payment-hotel-sidebar {
-    display: grid;
-    grid-template-rows: auto auto;
+.payment-hotel-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.payment-hotel-box {
+    background: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .payment-hotel-flight strong {
     font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.payment-hotel-flight p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
 }
 
 .payment-hotel-flight-time {
-    color: red;
+    color: #000;
     font-weight: bold;
 }
 
-.payment-hotel-price h3 {
-    font-size: 18px;
+.payment-hotel-divider {
+    border-top: 1px solid #b1acac;
+    margin-top: 10px;
+    padding-top: 8px;
+}
+
+#toggle-room-detail {
+    color: #ff4d6d;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#toggle-room-detail:hover {
+    color: #f57c00 !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.room-detail-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto;
+}
+
+.room-content {
+    padding-left: 20px;
+}
+
+.room-content > h3 {
+    padding-left: 0;
+    margin-left: -20px;
+}
+
+.room-content li {
+    padding-left: 25px;
+}
+
+.room-content ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+
+.room-image-wrapper {
+    position: relative;
+    width: 435px;
+    height: 114px;
+    border-radius: 8px;
+    overflow: hidden;
     margin-bottom: 10px;
 }
 
-.payment-hotel-price-table {
-    width: 100%;
-    border-collapse: collapse;
+.image-content {
+    position: relative;
+    height: 100%;
+    margin-top: 6px;
 }
 
-.payment-hotel-price-table td {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
+.room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.discount-badge {
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    width: 125px;
+    display: flex;
+    padding: 4px 10px;
+    z-index: 2;
+    position: absolute;
+    font-size: 18px;
+    background: #FF3366;
+    align-items: center;
+    font-family: BeVietnamPro-SemiBold;
+    line-height: 21px;
+    white-space: nowrap;
+    border-radius: 8px 0;
+    justify-content: center;
+}
+
+.room-include-box {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-left: 4px solid #f5427b;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.room-note-box {
+    margin-top: 10px;
+}
+
+.room-detail-box p {
+    margin-bottom: 8px; 
+}
+
+.room-detail-box ul {
+    padding-left: 18px; 
+    margin-bottom: 10px; 
+}
+
+.room-detail-box li {
+    margin-bottom: 5px; 
+}
+
+.payment-hotel-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+/* payment-hotel-price */
+.payment-hotel-price-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.payment-hotel-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.payment-hotel-price-label {
+    font-size: 14px;
+}
+
+.payment-hotel-price-values {
+    text-align: right;
+}
+
+.payment-hotel-price-discount {
+    background: #FF3366;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.payment-hotel-price-original {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #888;
+}
+
+.payment-hotel-price-final {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+.payment-hotel-price-line {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.payment-hotel-price-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.payment-hotel-price-total-left,
+.payment-hotel-price-total-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-hotel-price-amount {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.payment-hotel-price-note {
+    font-size: 12px;
+    color: #555;
+    margin-top: 2px;
 }
 
 .payment-hotel-total {
@@ -105,9 +313,9 @@
 }
 
 .payment-hotel-contact {
-    width: 59%;
+    width: 100%;
     margin-top: 20px;
-    padding: 25px;
+    padding: 20px;
 }
 
 .payment-hotel-contact h3 {
@@ -167,7 +375,7 @@
 }
 
 .payment-hotel-method {
-    width: 59%;
+    width: 100%;
     margin-top: 20px;
     padding: 25px;
 }
